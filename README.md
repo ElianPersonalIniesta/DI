@@ -1,2 +1,2 @@
 # DI
-Repositorio del alumno Elian Mateo Sánchez Aguilar para la asignatura Diseño Interfaces 2ºDAM. 
+## Repositorio del alumno *Elian Mateo Sánchez Aguilar* para la asignatura *Diseño Interfaces 2ºDAM*. 
