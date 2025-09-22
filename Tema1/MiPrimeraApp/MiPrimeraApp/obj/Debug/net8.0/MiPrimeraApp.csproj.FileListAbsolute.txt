@@ -1,0 +1,15 @@
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\bin\Debug\net8.0\MiPrimeraApp.exe
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\bin\Debug\net8.0\MiPrimeraApp.deps.json
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\bin\Debug\net8.0\MiPrimeraApp.runtimeconfig.json
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\bin\Debug\net8.0\MiPrimeraApp.dll
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\bin\Debug\net8.0\MiPrimeraApp.pdb
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.AssemblyInfoInputs.cache
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.AssemblyInfo.cs
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.csproj.CoreCompileInputs.cache
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.sourcelink.json
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.dll
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\refint\MiPrimeraApp.dll
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.pdb
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\MiPrimeraApp.genruntimeconfig.cache
+C:\DAM2\DI\Tema1\MiPrimeraApp\MiPrimeraApp\obj\Debug\net8.0\ref\MiPrimeraApp.dll
