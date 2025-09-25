@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            //MultiploCinco multiploCinco = new MultiploCinco(); esto haria falta si no fuese estatico
+            MultiploCinco multiploCinco = new MultiploCinco();
             int numero;
             bool valido=false;
             do 
@@ -13,8 +13,7 @@
                 {
                     Console.WriteLine("Introduce un numero");
                     numero = Int32.Parse(Console.ReadLine());
-                    //multiploCinco.EsMultiploCinco(numero); --> Esto sería si no fuese estatico.
-                    MultiploCinco.EsMultiploCinco(numero);
+                    multiploCinco.EsMultiploCinco(numero);
                     valido = true;
                 }
                 catch (Exception e) { Console.WriteLine(e.Message); }

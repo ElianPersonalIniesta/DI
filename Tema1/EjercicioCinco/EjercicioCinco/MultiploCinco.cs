@@ -13,7 +13,7 @@ namespace EjercicioCinco
         /// </summary>
         /// <param name="num">Numero a comparar</param>
         /// <returns>True si es Multiplo, False si no es multiplo</returns>
-        public static bool EsMultiploCinco(int num)
+        public  bool EsMultiploCinco(int num)
         {
             if (num % 5 == 0)
             {
