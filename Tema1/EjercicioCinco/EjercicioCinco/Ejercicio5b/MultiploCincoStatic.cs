@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EjercicioCinco
+namespace Ejercicio5b
 {
-    public class MultiploCinco
+    public class MultiploCincoStatic
     {
         /// <summary>
         /// Metodo que comprueba si un numero es múltiplo de 5
