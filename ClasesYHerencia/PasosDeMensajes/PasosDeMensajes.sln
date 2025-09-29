@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasosDeMensajes", "PasosDeMensajes\PasosDeMensajes.csproj", "{218A13E9-7F57-4C45-95E7-44AC4C396D13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{218A13E9-7F57-4C45-95E7-44AC4C396D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{218A13E9-7F57-4C45-95E7-44AC4C396D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{218A13E9-7F57-4C45-95E7-44AC4C396D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{218A13E9-7F57-4C45-95E7-44AC4C396D13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F0DF2B8-D2F4-4587-BBB4-0A5C621DC8B2}
+	EndGlobalSection
+EndGlobal
