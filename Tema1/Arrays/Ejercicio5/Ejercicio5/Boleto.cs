@@ -18,21 +18,54 @@ namespace Ejercicio5
 
         public void creacionBoleto()
         {
-            bool comprobante = false; // inicializacion de comprobante a true. También lo podemos llamar flag
+            bool comprobante;// inicializacion de comprobante a true. También lo podemos llamar flag
             Random rnd = new Random();
             for (int i = 0; i < combinacion.Length; i++)
             {
-                if (i != 0)
+                int temp;
+                do
                 {
-                    do
-                    {//Metemos comprobacion para saber si el numero i es igual a numero i+1 o i-1. Metodo pseudoburbuja
-
-
+                    comprobante = true;
+                    temp = rnd.Next(1,50);
+                    for(int j = 0; j < combinacion.Length; j++)
+                    {
+                        if (temp == combinacion[j]) { comprobante = false; }
                     }
-                    while (!comprobante); // si comprobante es false entonces se continua con la asignacion de RND }
-
                 }
+                while (!comprobante);
+                combinacion[i] = temp;
             }
         }
+
+        ///Metodo para devolver un array de enteros.
+        ///Auxiliar para el Equals. No se si es lo correcto.
+        public int[] getCombinacion()
+        {
+            int[] numero = new int[combinacion.Length];
+            for(int i = 0;i < combinacion.Length; i++)
+            {
+                numero[i] = combinacion[i];
+            }
+            return numero;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(Object? bol)
+        {
+            Boleto miBoleto2 = (Boleto) bol;
+            bool flag = false;
+            int[] aux = miBoleto2.getCombinacion();
+            int[] auxPrincipal = this.getCombinacion();
+            for(int i = 0; i < aux.Length; i++)
+            {
+                /// KEDA HACER OTRO FOR, EL FLAG TAMBIEN TIENE QUE COMPROBAR SI TIENE UN FLAG
+                /// MIRA A VER COMO OVERRIDEAR EL TOSTRING Y COMO IMPLEMENTARLO PARA MIL BOLETOS!!!!!
+            }
+            return base.Equals(bol);
+        }
+        
     }
 }
