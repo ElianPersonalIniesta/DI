@@ -56,16 +56,30 @@ namespace Ejercicio5
         public override bool Equals(Object? bol)
         {
             Boleto miBoleto2 = (Boleto) bol;
-            bool flag = false;
             int[] aux = miBoleto2.getCombinacion();
             int[] auxPrincipal = this.getCombinacion();
             for(int i = 0; i < aux.Length; i++)
             {
-                /// KEDA HACER OTRO FOR, EL FLAG TAMBIEN TIENE QUE COMPROBAR SI TIENE UN FLAG
-                /// MIRA A VER COMO OVERRIDEAR EL TOSTRING Y COMO IMPLEMENTARLO PARA MIL BOLETOS!!!!!
+                for(int j = 0; j < aux.Length; j++)
+                {
+                    if (aux[i] == auxPrincipal[j])
+                    {
+                        return true;
+                    }
+                }
             }
-            return base.Equals(bol);
+            return false;
         }
-        
+
+        ///Tiene que haber otra manera que simplemente almacene en lugar de recorrer todo.
+        public override string ToString()
+        {
+            String aux="";
+            foreach(int num in this.getCombinacion())
+            {
+                aux += num + " ";
+            }
+            return aux;
+        }
     }
 }
