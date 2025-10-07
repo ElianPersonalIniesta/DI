@@ -11,8 +11,11 @@ namespace EjercicioDos
         private string nombre;
         private int longitud;
         public string Nombre 
-        { get; 
-          set; }
+        { 
+            get; 
+          
+            set; 
+        }
         public int Longitud 
         { 
           get 
@@ -21,10 +24,9 @@ namespace EjercicioDos
             }
           set 
             { 
-                this.Longitud = value;
+                this.Longitud = Nombre.Length;
             }
         }
-
         public Persona(string nombre)
         {
             this.nombre = nombre;

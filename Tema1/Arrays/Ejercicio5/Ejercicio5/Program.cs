@@ -30,7 +30,6 @@ Boleto[] creacionBoletos()
                     flag = true;
                 }
             }
-
         }
         if (!flag) contador++;
     }

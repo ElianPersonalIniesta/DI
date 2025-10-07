@@ -4,23 +4,23 @@
     {
         static void Main(string[] args)
         {
-            List<string> lista1 = new List<string>();
-            List<int> lista2 = new List<int>();
+            ///Creamos la lista de personas.
+            List<Persona> lista1 = new List<Persona>();
             string str = "";
+            ///Bucle para meter personas si no ponemos fin
             do
             {
                 str = Console.ReadLine();
                 if (str != "fin")
                 {
-                    lista1.Add(str);
-                    lista2.Add(str.Length);
+                    lista1.Add(new Persona(str));
                 }
             }
             while (str != "fin");
+            ///Bucle for para recorrer la lista de personas.
             for(int i = 0; i < lista1.Count; i++)
             {
-                Console.WriteLine(lista1[i]);
-                Console.WriteLine(lista2[i]);
+                Console.WriteLine("Nombre: "+lista1[i].Nombre+" longitud: " + lista1[i].Longitud);
             }
         }
     }
