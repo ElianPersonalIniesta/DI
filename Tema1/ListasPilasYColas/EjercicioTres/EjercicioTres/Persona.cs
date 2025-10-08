@@ -9,25 +9,20 @@ namespace EjercicioTres
     public class Persona
     {
         private int edad;
-        private static Random rnd = new Random();
 
-        public Persona()
+        public Persona(int edad)
         {
-            this.edad = generaNumAleatorio(5, 61);
+            this.edad = edad;
         }
         public int getEdad()
         {
             return edad;
         }
-        public void setEdad()
+        public void setEdad(int edad)
         {
-            ///Cambio el this.edad = edad para poner directamente la edad aleatorio de la persona
-            this.edad = generaNumAleatorio(5,60);
-        }
-        public static int generaNumAleatorio(int minimo, int maximo)
-        {
-            
-            return rnd.Next(minimo, (maximo + 1));
+            ///Cambio el this.edad = edad para poner directamente la edad aleatorio de la persona. Ya no
+            ///
+            this.edad = edad;
         }
     }
 
