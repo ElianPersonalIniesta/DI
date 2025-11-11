@@ -1,4 +1,4 @@
-namespace EjercicioDos
+namespace EjemploDataSet
 {
     internal static class Program
     {
