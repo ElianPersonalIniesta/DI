@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Ejercicio4_1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vista="clr-namespace:Ejercicio4_1.Vista"
+    Title="Ejercicio4_1">
+
+    <ShellContent
+        Title="Alinear Etiqueta"
+        ContentTemplate="{DataTemplate vista:PruebaAlineacion}"
+        Route="PruebaAlineacion" />
+    <ShellContent
+        Title="Juego Alineacion"
+        ContentTemplate="{DataTemplate vista:JuegoAlineacion}"
+        Route="JuegoAlineacion"
+        />
+
+</Shell>

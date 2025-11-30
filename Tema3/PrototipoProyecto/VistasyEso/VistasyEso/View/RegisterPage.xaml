@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VistasyEso.View.RegisterPage"
+             Title="RegisterPage">
+    <VerticalStackLayout>
+        <Label
+            Text="Datos de registro"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid Margin="0,30,40,0" RowSpacing="20" ColumnSpacing="20">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*" />
+            </Grid.RowDefinitions>
+
+            <!-- COLUMNA DE LA IZQUIERDA-->
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Nombre"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                />
+            <Label
+                Grid.Column="0"
+                Grid.Row="1"
+                Text="Apellidos"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                />
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Edad"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                />
+            <Label
+                Grid.Column="0"
+                Grid.Row="3"
+                Text="Correo Electrónico"
+                HorizontalTextAlignment="End"
+                 VerticalTextAlignment="Center"              
+                />
+            <Label
+                Grid.Column="0"
+                Grid.Row="4"
+                Text="Contraseña"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"                
+                />
+            
+            <!--Ahora empezamos con las de la derecha-->
+            <Entry
+                Grid.Column="1"
+                Grid.Row="0"
+                Background="WhiteSmoke"
+                TextColor="DarkGrey"
+                Placeholder="Introduzca su nombre"
+                />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="1"
+                Background="WhiteSmoke"
+                TextColor="DarkGrey"
+                Placeholder="Introduzca su apellido"
+                />
+            <Slider
+                x:Name="ageSlider"
+                Grid.Column="1"
+                Grid.Row="2"
+                Maximum="110"
+                Minimum="18"
+                HorizontalOptions="Start"
+                Background="WhiteSmoke"
+                WidthRequest="360"
+                />
+            <Label
+                Grid.Column="1"
+                Grid.Row="2"
+                Text="{Binding Source={x:Reference ageSlider}, Path=Value,StringFormat='{0:F0}'}"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                TextColor="White"
+                />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="3"
+                Background="WhiteSmoke"
+                TextColor="DarkGrey"
+                Placeholder="Introduzca su correo electrónico"
+                />
+            <Entry
+                Grid.Column="1"
+                Grid.Row="4"
+                Background="WhiteSmoke"
+                TextColor="DarkGrey"
+                Placeholder="Introduzca su contraseña"
+                />
+        </Grid>
+        <Button
+          Text="Registrarse"
+            
+            TextColor="White"
+            Margin="50,0,40,20"
+            HorizontalOptions="Fill"
+            HeightRequest="50"
+            FontSize="16"
+            FontAttributes="Bold"
+            CornerRadius="25"
+            />
+    </VerticalStackLayout>
+</ContentPage>

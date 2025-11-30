@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio4_1.Vista.JuegoAlineacion"
+             Title="Juego que ira cambiando la posicion de las etiquetas">
+    <Grid Padding="28" RowSpacing="10" RowDefinitions="50,50,*">
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Label Text="Horizontal" VerticalOptions="Center"/>
+            <Button Text="Start"/>
+            <Button Text="Center"/>
+            <Button Text="End"/>
+            <Button Text="Fill"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Grid.Row="1" Spacing="10">
+            <Label Text="Horizontal" VerticalOptions="Center"/>
+            <Button Text="Start"/>
+            <Button Text="Center"/>
+            <Button Text="End"/>
+            <Button Text="Fill"/>
+        </HorizontalStackLayout>
+        <Label Grid.Row="2" FontSize="25" x:Name="target" Background="Silver" Text="Holaaaa gays"/>
+    </Grid>
+</ContentPage>

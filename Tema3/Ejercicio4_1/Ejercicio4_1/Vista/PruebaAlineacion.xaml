@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio4_1.Vista.PruebaAlineacion"
+             Title="Iremos cambiando la configuración">
+    <Grid BackgroundColor="LightPink">
+        
+        <!--<Label x:Name="target" FontSize="25" BackgroundColor="Silver" Text="Miau" />-->
+        <!--<Label x:Name="target" FontSize="25" BackgroundColor="Silver" Text="Miau" 
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>-->
+        <Label x:Name="target" FontSize="25" BackgroundColor="Silver" Text="Miau"
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               HorizontalOptions="End" VerticalOptions="Center"/> 
+                <!--asi se queda a la izquierda del todo mi rey, al igual que si ponemos center, y tal.
+                Asi se ajusta al contenido-->
+        
+    </Grid>
+</ContentPage>

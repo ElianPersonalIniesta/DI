@@ -44,14 +44,16 @@ namespace EjemploDataSet
                 /// OBTENEMOS EL VALOR DE LA FILA (ROW) SOBRE LA QUE SE HA HECHO CLICK
                 DataGridViewRow filaClick = dataGridView1.Rows[e.RowIndex];
 
+                //DataGridViewRow filaSeleccionada = dataGridView1.SelectedRows[e].Cells[0].Value.ToString; ///Esto sería otra forma
+
                 ///Pillamos el valor de la primera celda, en este caso al ser array seria 0
                 String valorCodigo = filaClick.Cells[0].Value.ToString();
 
                 ///MODIFGICAMOS EL VALOR DE dataGridView2
 
                 dataGridView2.DataSource = baseDeDatos.obtenerDatos(valorCodigo);
-                ///Devolvemos este valor :p
-                ///
+                //Devolvemos este valor :p
+                //
                 ////V2 NO SE PUJEDE MODIFICAR EL EVENTO, TIENE QUE SER VOID SI O SI!!!!
                 //return valorCodigo;
             }

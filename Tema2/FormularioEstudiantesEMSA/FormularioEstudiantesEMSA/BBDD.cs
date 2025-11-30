@@ -1,10 +1,11 @@
-﻿using System;
+﻿using FormularioEstudiantesEMSA.Modelo;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 
 //que aparezca un nuevo formulario modal con label de nombre, distrito y poblacion con unos textbox donde no se pueda escribir en el que aparazca esa información.
 // se ssaca de la bbdd, A la consulta se ele pasa el nombre de la ciudad, esa bbdd nos devuelve un dataRow
@@ -29,8 +30,12 @@ namespace EjemploDataSet
             {
                 miConexion.Close();
             }
-            miConexion.Open();
-            miConexion.Close();
+            else
+            {
+                miConexion.Open();
+                miConexion.Close();
+            }
+
         }
         public void CerrarConexion()
         {
@@ -40,13 +45,33 @@ namespace EjemploDataSet
         {
             try
             {
-                string cadenaDeConexion = $"server={servidor};port={puerto};user id={usuario};password={password};database=world;Allow Zero Datetime = True;Charset=utf8;";
+                string cadenaDeConexion = $"server={servidor};port={puerto};user id={usuario};password={password};database=test;Allow Zero Datetime = True;Charset=utf8;";
                 miConexion = new MySqlConnection(cadenaDeConexion);
                 AbrirConexion();
                 CerrarConexion();
                 return true;
             }
             catch(MySqlException e)
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// Metodo sobrecargado(mas o menos) de Conectar, los datos de conexión están dentro del metodo
+        /// OJO: NO ES LO MÁS VIABLE!!!!! PUEDEN HABER ROTURAS DE SEGURIDAD DENTRO DE LA BASE DE DATOS!!!!
+        /// </summary>
+        /// <returns></returns>
+        public bool Conectar()
+        {
+            try
+            {
+                string cadenaDeConexion = "server=127.0.0.1;port=3306;user id=root;password=root;database=test;Allow Zero Datetime = True;Charset=utf8;";
+                miConexion = new MySqlConnection(cadenaDeConexion);
+                AbrirConexion();
+                CerrarConexion();
+                return true;
+            }
+            catch (MySqlException e)
             {
                 return false;
             }
@@ -63,10 +88,10 @@ namespace EjemploDataSet
                 Esta era la forma antigua saes
                  */
 
-                miComando = new MySqlCommand("SELECT * FROM country", miConexion);
+                miComando = new MySqlCommand("SELECT * FROM ESTUDIANTES", miConexion);
                 miAdaptador = new MySqlDataAdapter(miComando);
-                miAdaptador.Fill(miDataset,"country");
-                DataTable tabla= miDataset.Tables["country"];
+                miAdaptador.Fill(miDataset,"estudiantes");
+                DataTable tabla= miDataset.Tables["ESTUDIANTES"];
                 CerrarConexion();
 
                 return tabla;
@@ -95,6 +120,33 @@ namespace EjemploDataSet
             {
                 return null;
             }
+        }
+        public List<ModelPersona> leerBBDD()
+        {
+            List<ModelPersona> listaPersona = new List<ModelPersona>();
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM estudiantes", miConexion);
+            MySqlDataReader lector;
+            AbrirConexion();
+            miConexion.Open();
+            lector = comando.ExecuteReader();
+            //CerrarConexion();
+
+            while (lector.Read())
+            {
+                ModelPersona nuevaPersona = new ModelPersona(lector[0].ToString(), lector[1].ToString(), lector[2].ToString());
+                listaPersona.Add(nuevaPersona);
+            }
+            CerrarConexion();
+            return listaPersona;
+        }
+
+        public void Agregar(string nombre, string apellidos)
+        {
+            AbrirConexion();
+            miConexion.Open();
+            MySqlCommand comando = new MySqlCommand($"INSERT INTO ESTUDIANTES (NOMBRE, APELLIDO) VALUES ('{nombre}', '{apellidos}')",miConexion);
+            comando.ExecuteNonQuery();
+            CerrarConexion();
         }
     }
 }//
