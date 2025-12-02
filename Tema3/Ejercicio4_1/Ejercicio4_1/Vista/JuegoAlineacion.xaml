@@ -3,21 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ejercicio4_1.Vista.JuegoAlineacion"
              Title="Juego que ira cambiando la posicion de las etiquetas">
-    <Grid Padding="28" RowSpacing="10" RowDefinitions="50,50,*">
+    <Grid x:Name="gridNoseNombre" Padding="28" RowSpacing="10" RowDefinitions="50,50,*">
         <HorizontalStackLayout Grid.Row="0" Spacing="10">
             <Label Text="Horizontal" VerticalOptions="Center"/>
-            <Button Text="Start"/>
-            <Button Text="Center"/>
-            <Button Text="End"/>
-            <Button Text="Fill"/>
+            <Button 
+                x:Name="btnStartHorizontal"
+                Clicked="BtnStart_Clicked" Text="Start" />
+            <Button x:Name="btnHorizontalCenter" Text="Center"
+                    Clicked="BtnHorizontalCenter_Clicked"/>
+            <Button Text="End" Clicked="BtnHorizontalEnd_Clicked"/>
+            <Button Text="Fill" Clicked="BtnHorizontalFill_Clicked"/>
         </HorizontalStackLayout>
         <HorizontalStackLayout Grid.Row="1" Spacing="10">
             <Label Text="Horizontal" VerticalOptions="Center"/>
-            <Button Text="Start"/>
-            <Button Text="Center"/>
-            <Button Text="End"/>
-            <Button Text="Fill"/>
+            <Button Text="Start" Clicked="BtnVerticalStart_Clicked"/>
+            <Button Text="Center" Clicked="BtnVerticalCenter_Clicked"/>
+            <Button Text="End" Clicked="BtnVerticalEnd_Clicked"/>
+            <Button Text="Fill" Clicked="BtnVerticalFill_Clicked"/>
         </HorizontalStackLayout>
-        <Label Grid.Row="2" FontSize="25" x:Name="target" Background="Silver" Text="Holaaaa gays"/>
+        <Label x:Name="lblCambiante" Grid.Row="2" FontSize="25" BackgroundColor="Silver"  Text="Holaaaa gays"/>
     </Grid>
 </ContentPage>
