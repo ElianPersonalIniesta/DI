@@ -21,6 +21,6 @@
             <Button Text="End" Clicked="BtnVerticalEnd_Clicked"/>
             <Button Text="Fill" Clicked="BtnVerticalFill_Clicked"/>
         </HorizontalStackLayout>
-        <Label x:Name="lblCambiante" Grid.Row="2" FontSize="25" BackgroundColor="Silver"  Text="Holaaaa gays"/>
+        <Label x:Name="lblCambiante" Grid.Row="2" FontSize="25" BackgroundColor="Silver"  Text="Holaaaa guys"/>
     </Grid>
 </ContentPage>

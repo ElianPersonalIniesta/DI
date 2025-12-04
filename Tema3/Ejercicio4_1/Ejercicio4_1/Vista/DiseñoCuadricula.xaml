@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio4_1.Vista.DiseñoCuadricula"
+             Title="DiseñoCuadricula">
+    <Grid RowDefinitions="10*,30*,15*,15*" ColumnDefinitions="50*,50*">
+        <Label BackgroundColor="Pink" Grid.Row="0" Grid.Column="0"/>
+        <Label Background="Aqua" Grid.Row="0" Grid.Column="1"/>
+        <Label Background="DarkMagenta"  Grid.Row="1" Grid.Column="0"/>
+        <Label Background="DarkKhaki" Grid.Row="1" Grid.Column="1"/>
+        <Label Background="HotPink" Grid.Row="2" Grid.Column="0"/>
+        <Label Background="MediumAquamarine" Grid.Row="2" Grid.Column="1"/>
+        <Label Background="Peru" Grid.Row="3" Grid.Column="0"/>
+        <Label Background="MidnightBlue" Grid.Row="3" Grid.Column="1"/>
+
+    </Grid>
+</ContentPage>

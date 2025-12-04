@@ -65,6 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Vista\DiseñoCuadricula.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Vista\JuegoAlineacion.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

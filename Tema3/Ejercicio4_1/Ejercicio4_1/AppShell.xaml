@@ -15,5 +15,9 @@
         ContentTemplate="{DataTemplate vista:JuegoAlineacion}"
         Route="JuegoAlineacion"
         />
+    <ShellContent
+        Title="Diseño de Cuadricula Responsive"
+        ContentTemplate="{DataTemplate vista:DiseñoCuadricula}"
+        Route="DiseñoCuadricula"/>
 
 </Shell>
